@@ -215,7 +215,7 @@
                                             <input type="text" id="status-pesanan" class="form-control" value="-" readonly>
                                         @else
                                             <select id="status-pesanan" class="form-select" name="pesan">
-                                                <option value="3" @if($store['pesan'] == 3) selected @endif>Pesanan Sedang Siapkan</option>
+                                                <option value="3" @if($store['pesan'] == 3) selected @endif>Preparing Order</option>
                                                 <option value="4" @if($store['pesan'] == 4) selected @endif>Pesanan Dikirim</option>
                                                 <option value="5" @if($store['pesan'] == 5) selected @endif>Pesanan Sudah Sampai Tujuan</option>
                                             </select>

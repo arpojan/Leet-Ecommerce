@@ -8,12 +8,11 @@ use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+
 Route::post('/login-proses', [AuthController::class, 'login_proses'])->name('login-proses');
+
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::get('/register', [AuthController::class, 'register'])->name('register');
@@ -30,6 +29,7 @@ Route::Post('/user/home/{user_id}/detail-produk/{produk_id}/tambah-keranjang', [
 
 Route::get('/user/home/{user_id}/keranjang', [TransaksiController::class, 'keranjang'])->name('user.keranjang');
 Route::get('api/user/{user_id}/keranjang', [TransaksiController::class, 'isiKeranjang']);
+// Route::get('/user/home/{user_id}/keranjang/hapus/{id}', [TransaksiController::class, 'hapusKeranjang']);
 Route::post('/checkout', [TransaksiController::class, 'checkout']);
 
 Route::get('/user/home/{user_id}/pembayaran', [TransaksiController::class, 'pembayaran'])->name('user.pembayaran');

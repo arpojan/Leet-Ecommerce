@@ -127,6 +127,7 @@ class DashboardController extends Controller
     public function edit($id) 
     {
         $produk = Produk::findorFail($id);
+        // dd($produk);
 
         $varian = [
             'S' => $produk->stokS,

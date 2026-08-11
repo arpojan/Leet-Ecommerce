@@ -1,86 +1,543 @@
- #beranda, #about, #lokasi {
-    padding-top: 170px; 
-    margin-top: -170px; 
+/* =========================================
+   LEET ECOMMERCE - Global Styles
+   ========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --primary: #1a1a2e;
+    --accent: #c9a84c;
+    --accent-light: #e8c96d;
+    --light-bg: #f8f9fa;
+    --header-bg: #1a1a2e;
+    --navbar-bg: #ffffff;
+    --text-dark: #1a1a2e;
+    --text-muted: #6c757d;
+    --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --card-hover-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    --border-radius: 12px;
+    --transition: all 0.3s ease;
 }
 
-.title-lokasi {
-    margin-top: 100px;
+* {
+    box-sizing: border-box;
 }
 
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-dark);
+    background-color: var(--light-bg);
+    margin: 0;
+    padding: 0;
+}
+
+/* =========================================
+   HEADER (Top Bar)
+   ========================================= */
 .custom-header {
-    background-color: #cfebef;
-    padding: 1rem;
-    position: relative; 
-    z-index: 10;
+    background-color: var(--header-bg);
+    padding: 0.5rem 0;
+    position: relative;
+    z-index: 1020;
 }
 
 .custom-header .header-text {
     margin-left: 10px;
-    text-decoration: underline;
 }
 
 .custom-header .header-text a {
-    color: #000;
-    font-size: 1.2rem;
-    font-weight: 500;
+    color: #ccc;
+    font-size: 0.82rem;
+    font-weight: 400;
+    text-decoration: none;
+    transition: var(--transition);
 }
 
+.custom-header .header-text a:hover {
+    color: var(--accent-light);
+}
+
+.custom-header .logo-img {
+    border-radius: 50%;
+    border: 2px solid var(--accent);
+}
+
+.custom-header .text-end a {
+    color: #ccc;
+    font-size: 0.82rem;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.custom-header .text-end a:hover {
+    color: var(--accent-light);
+}
+
+.custom-header .text-end span {
+    color: #666;
+}
+
+/* =========================================
+   NAVBAR
+   ========================================= */
 .custom-navbar {
-    background-color: #ffffff;
-    padding: 0.8rem;
-    position: -webkit-sticky;
+    background-color: var(--navbar-bg);
+    padding: 0;
     position: sticky;
-    top: 0; 
-    z-index: 9; 
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
+    top: 0;
+    z-index: 1019;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.custom-navbar .container {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.custom-navbar .nav-logo img {
+    height: 56px;
+    width: auto;
+    object-fit: contain;
 }
 
 .custom-navbar ul li a {
-    color: #000;
-}
-
-.custom-navbar a,
-.custom-header a {
+    color: var(--text-dark);
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
     text-decoration: none;
+    border-radius: 6px;
+    transition: var(--transition);
+    position: relative;
 }
 
+.custom-navbar ul li a:hover {
+    color: var(--accent);
+    background-color: rgba(201, 168, 76, 0.08);
+}
+
+.custom-navbar ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: var(--accent);
+    transition: width 0.3s ease;
+}
+
+.custom-navbar ul li a:hover::after {
+    width: 60%;
+}
+
+.navbar-icon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: var(--light-bg);
+    border: 1px solid #eee;
+    transition: var(--transition);
+    text-decoration: none;
+    color: var(--text-dark);
+}
+
+.navbar-icon-btn:hover {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(201, 168, 76, 0.3);
+}
+
+.navbar-icon-btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* =========================================
+   MAIN CONTAINER
+   ========================================= */
 .container {
-    margin-top: 1rem;
+    margin-top: 0;
 }
 
-.is-sticky {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 8;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+.main-content {
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+}
+
+/* =========================================
+   CAROUSEL / BANNER
+   ========================================= */
+#beranda {
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.carousel-item img {
+    height: 480px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0;
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    background-color: rgba(
-        0,
-        0,
-        0,
-        0.5
-    ); 
+    background-color: rgba(0, 0, 0, 0.5);
     border-radius: 50%;
+    padding: 20px;
+    background-size: 50%;
 }
 
-.carousel-indicators button {
-    background-color: rgba(0, 0, 0, 0.5);
+.carousel-indicators [data-bs-target] {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
 }
 
 .carousel-indicators .active {
-    background-color: #000; 
+    background-color: var(--accent);
+    width: 24px;
+    border-radius: 4px;
 }
 
-#lokasi {
-    padding: 50px 0;
+/* =========================================
+   SECTION TITLES
+   ========================================= */
+.section-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    text-align: center;
+    margin-bottom: 0.4rem;
 }
-.map-container {
-    border: 1px solid #ddd;
-    border-radius: 10px;
+
+.section-subtitle {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.section-divider {
+    width: 50px;
+    height: 3px;
+    background: var(--accent);
+    margin: 0.5rem auto 1.5rem;
+    border-radius: 2px;
+}
+
+/* =========================================
+   PRODUCT CARDS
+   ========================================= */
+.product-section {
+    padding: 2.5rem 0;
+}
+
+.card {
+    border: none;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: white;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--card-hover-shadow);
+}
+
+.card-img-top {
+    height: 260px;
+    object-fit: cover;
+    object-position: center top;
+    transition: transform 0.4s ease;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.04);
+}
+
+.card-body {
+    padding: 1.2rem;
+}
+
+.card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    color: var(--text-dark);
+}
+
+.card-price {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 0.4rem;
+}
+
+.card-text-desc {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.btn-lihat-produk {
+    display: inline-block;
+    width: 100%;
+    padding: 0.6rem 1rem;
+    background-color: var(--primary);
+    color: white;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-lihat-produk:hover {
+    background-color: var(--accent);
+    color: white;
+    transform: translateY(-1px);
+}
+
+/* =========================================
+   ABOUT SECTION
+   ========================================= */
+#about {
+    padding: 2.5rem 0;
+}
+
+.about-card {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    padding: 2.5rem 2.5rem;
+}
+
+.about-icon-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #f0e9d6, #fff8e7);
+    border: 3px solid var(--accent);
+    margin: 0 auto;
+    box-shadow: 0 6px 20px rgba(201, 168, 76, 0.25);
+}
+
+.about-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.about-text {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.85;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+#about h1,
+#about h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+
+/* =========================================
+   LOKASI SECTION
+   ========================================= */
+#lokasi {
+    padding: 3rem 0;
+    margin-bottom: 2rem;
+}
+
+.title-lokasi {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.map-container {
+    border: 1px solid #e8e8e8;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+}
+
+.lokasi-info h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.lokasi-info p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+/* =========================================
+   MODAL STYLING
+   ========================================= */
+.modal-content {
+    border-radius: 16px;
+    border: none;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    background-color: var(--primary);
+    color: white;
+    border-radius: 16px 16px 0 0;
+    padding: 1.2rem 1.5rem;
+    border-bottom: none;
+}
+
+.modal-header .modal-title {
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.modal-header .btn-close {
+    filter: invert(1);
+    opacity: 0.7;
+}
+
+.modal-body {
+    padding: 1.8rem;
+}
+
+.modal-body .form-label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    margin-bottom: 0.35rem;
+}
+
+.modal-body .form-control {
+    border: 1.5px solid #e8e8e8;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    padding: 0.6rem 0.9rem;
+    transition: var(--transition);
+}
+
+.modal-body .form-control:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.15);
+}
+
+.modal-body .btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    border-radius: 8px;
+    font-weight: 600;
+    padding: 0.65rem;
+    transition: var(--transition);
+}
+
+.modal-body .btn-primary:hover {
+    background-color: var(--accent);
+    border-color: var(--accent);
+}
+
+.modal-body p a {
+    color: var(--accent);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.modal-body p a:hover {
+    text-decoration: underline;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+footer.site-footer {
+    background-color: var(--primary);
+    color: #ccc;
+    padding: 3rem 0 1.5rem;
+    margin-top: 2rem;
+}
+
+footer.site-footer h5 {
+    color: white;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+footer.site-footer .list-unstyled li {
+    margin-bottom: 0.5rem;
+}
+
+footer.site-footer .list-unstyled a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: var(--transition);
+}
+
+footer.site-footer .list-unstyled a:hover {
+    color: var(--accent-light);
+    padding-left: 4px;
+}
+
+.footer-divider {
+    border-color: rgba(255, 255, 255, 0.1);
+    margin: 1.5rem 0;
+}
+
+.footer-bottom {
+    font-size: 0.8rem;
+    color: #777;
+    text-align: center;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 220px;
+    }
+
+    .custom-navbar .nav-logo img {
+        height: 44px;
+    }
+
+    .card-img-top {
+        height: 200px;
+    }
+
+    #about h1 {
+        font-size: 1.4rem;
+    }
 }

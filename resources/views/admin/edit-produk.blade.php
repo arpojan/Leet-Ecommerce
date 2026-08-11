@@ -36,10 +36,7 @@
                 @for ($i = 0; $i <= 3; $i++)
                     <div>
                         <div class="mb-4 d-flex justify-content-center">
-                            @php
-                                $gambarPath = isset($produk->gambar[$i]) ? 'storage/assets/produk/' . $produk->gambar[$i] : 'https://mdbootstrap.com/img/Photos/Others/placeholder.jpg';
-                            @endphp
-                            <img id="selectedImage{{ $i }}" src="{{ asset($gambarPath) }}" alt="example placeholder"/>
+                            <img id="selectedImage{{ $i }}" src="{{ asset('storage/assets/produk/' . $produk->{'gambar' . $i}) }}" alt="https://mdbootstrap.com/img/Photos/Others/placeholder.jpg"/>
                         </div>
                         <div class="d-flex justify-content-center">
                             <div data-mdb-ripple-init class="btn btn-primary btn-rounded">

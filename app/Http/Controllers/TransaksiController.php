@@ -7,6 +7,7 @@ use App\Models\Store;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 use Termwind\Components\Dd;
+use Illuminate\Support\Facades\Log;
 
 class TransaksiController extends Controller
 {
@@ -81,6 +82,15 @@ class TransaksiController extends Controller
         return response()->json($keranjang);
     }
 
+    // public function hapusKeranjang($user_id, $itemId) 
+    // {
+    //     Store::where('user_id', $user_id)
+    //          ->where('id', $itemId)
+    //          ->delete();
+
+    //     return redirect()->route('user.keranjang', ['user_id' => $user_id]);
+    // }
+
     public function checkout(Request $request) 
     {
         $request->validate([
@@ -105,8 +115,20 @@ class TransaksiController extends Controller
                     });
 
         $user = User::where('id', $user_id)->first();
+
+        $biaya_ongkir = $user->alamat;
+
+        if (strpos(strtolower($biaya_ongkir), "jakarta") !== false) {
+            $ongkir = 15000;
+        } elseif (strpos(strtolower($biaya_ongkir), "bandung") !== false) {
+            $ongkir = 15000;
+        } elseif (strpos(strtolower($biaya_ongkir), "jawa barat") !== false) {
+            $ongkir = 20000;
+        } else {
+            $ongkir = 25000;
+        }
         
-        return view('user.pembayaran', compact('user_id', 'store', 'user'));
+        return view('user.pembayaran', compact('user_id', 'store', 'user', 'ongkir'));
     }
 
     public function pembayaranProses(Request $request, $user_id)
