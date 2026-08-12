@@ -4,15 +4,15 @@ Leet E-Commerce adalah sebuah platform toko online (e-commerce) komprehensif yan
 
 ---
 
-## 🚀 Fitur Utama
+## Fitur Utama
 
-### 🛒 Untuk Pelanggan (Customer)
+### Untuk Pelanggan (Customer)
 * **Katalog & Detail Produk:** Menjelajahi daftar produk dan melihat detail produk secara spesifik (termasuk galeri foto, deskripsi, harga, dan varian ukuran).
 * **Keranjang Belanja (Cart):** Menambahkan produk ke keranjang belanja dengan integrasi kuantitas (jumlah) dan pilihan varian secara mudah.
 * **Proses Checkout & Pembayaran:** Sistem checkout (pembayaran) mandiri di mana pelanggan dapat mengunggah (upload) struk / bukti transfer pembayaran.
 * **Manajemen Profil:** Halaman profil pelanggan yang modern untuk melacak riwayat pesanan (status pesanan) dan informasi diri.
 
-### 💼 Untuk Administrator (Admin Panel)
+### Untuk Administrator (Admin Panel)
 * **Dashboard Profesional:** Antarmuka admin dengan tata letak *sidebar* yang modern, ringkas, dan responsif (menggunakan Bootstrap Icons dan SweetAlert).
 * **Manajemen Produk (CRUD):** 
   * Menambah produk baru lengkap dengan spesifikasi kategori dan harga.
@@ -28,7 +28,7 @@ Leet E-Commerce adalah sebuah platform toko online (e-commerce) komprehensif yan
 
 ---
 
-## 🛠️ Teknologi yang Digunakan
+## Teknologi yang Digunakan
 * **Backend:** PHP 8.x / Laravel 10 (atau lebih baru)
 * **Frontend:** HTML5, CSS3, JavaScript, Blade Templating Engine
 * **UI/UX Framework:** Bootstrap 5 (menggunakan *Cards*, *Modals*, *Forms*, *Grid* untuk UI yang responsif)
@@ -36,7 +36,7 @@ Leet E-Commerce adalah sebuah platform toko online (e-commerce) komprehensif yan
 
 ---
 
-## 💻 Instalasi & Cara Menjalankan Aplikasi
+## Instalasi & Cara Menjalankan Aplikasi
 
 Ikuti langkah-langkah di bawah ini untuk menjalankan aplikasi Leet E-Commerce di mesin lokal Anda:
 
@@ -92,7 +92,7 @@ Ikuti langkah-langkah di bawah ini untuk menjalankan aplikasi Leet E-Commerce di
 
 ---
 
-## 🔑 Kredensial Default
+## Kredensial Default
 
 Setelah Anda melakukan `migrate:fresh --seed`, Anda dapat mencoba masuk ke aplikasi menggunakan akun bawaan (dummy):
 
@@ -105,7 +105,7 @@ Setelah Anda melakukan `migrate:fresh --seed`, Anda dapat mencoba masuk ke aplik
 
 ---
 
-## 📸 Tangkapan Layar (Screenshots)
+## Tangkapan Layar (Screenshots)
 *(Anda dapat menambahkan gambar screenshot aplikasi di folder assets/ dan menautkannya di sini)*
 - Beranda / Landing Page
 - Katalog & Detail Produk
