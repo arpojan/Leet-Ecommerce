@@ -171,7 +171,4 @@ Contributions are welcome! If you'd like to improve Leet E-Commerce:
 This project is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
 ---
-<div align="center">
-  <b>Built with ❤️ by [YOUR_NAME] for Leet E-Commerce</b><br>
-  <a href="[DEMO_URL]">Live Demo</a>
 </div>
