@@ -1,4 +1,4 @@
-# 🛒 Leet E-Commerce
+# Platform E-Commerce
 
 <div align="center">
   <img src="https://img.shields.io/badge/PHP-8.2+-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP Version">
@@ -11,7 +11,7 @@
 
 ---
 
-## 🌟 About This Project
+## About This Project
 
 **Leet E-Commerce** is a robust, full-stack online store platform built with Laravel 11. It provides a seamless shopping experience for customers and a comprehensive management dashboard for administrators. 
 
@@ -19,15 +19,15 @@ What sets this project apart is its **manual payment verification system**—all
 
 ---
 
-## 🚀 Key Features
+## Key Features
 
-### 🛍️ Customer Experience
+### Customer Experience
 - **Dynamic Product Catalog:** Browse products with detailed views, including multiple images, descriptions, and size-specific stock availability.
 - **Intuitive Shopping Cart:** Add products to the cart with specific size variants and quantities.
 - **Manual Payment Checkout:** Secure checkout process supporting manual bank transfers with proof of payment image uploads.
 - **Order Tracking:** User profile dashboard to monitor order statuses (Pending, Processing, Completed) and view transaction history.
 
-### 💼 Administrator Panel
+### Administrator Panel
 - **Comprehensive Dashboard:** Modern, responsive admin interface for complete store oversight.
 - **Advanced Product Management (CRUD):**
   - Add/Edit/Delete products with multi-image support (up to 4 images per product).
@@ -40,7 +40,7 @@ What sets this project apart is its **manual payment verification system**—all
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Backend:** PHP 8.2, Laravel 11.9
 - **Frontend:** Blade Templating, Tailwind CSS, Bootstrap 5 (UI Components)
@@ -49,7 +49,7 @@ What sets this project apart is its **manual payment verification system**—all
 
 ---
 
-## 📋 Prerequisites
+## Prerequisites
 
 Before installing the project, ensure you have the following software installed on your system:
 - **PHP** >= 8.2
@@ -145,7 +145,7 @@ While this is primarily a monolithic web application, here are the core routes h
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 > **Note to Developer:** Please replace the placeholders below with actual image paths once screenshots are captured.
 
@@ -155,7 +155,7 @@ While this is primarily a monolithic web application, here are the core routes h
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! If you'd like to improve Leet E-Commerce:
 1. Fork the repository
@@ -166,7 +166,7 @@ Contributions are welcome! If you'd like to improve Leet E-Commerce:
 
 ---
 
-## 📄 License
+## License
 
 This project is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
