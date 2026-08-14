@@ -145,16 +145,6 @@ While this is primarily a monolithic web application, here are the core routes h
 
 ---
 
-## Screenshots
-
-> **Note to Developer:** Please replace the placeholders below with actual image paths once screenshots are captured.
-
-| Storefront Catalog | Product Details | Admin Dashboard | Order Verification |
-|:---:|:---:|:---:|:---:|
-| ![Catalog]([CATALOG_IMAGE_URL]) | ![Product]([PRODUCT_IMAGE_URL]) | ![Dashboard]([ADMIN_DASHBOARD_URL]) | ![Verification]([ORDER_VERIFICATION_URL]) |
-
----
-
 ## Contributing
 
 Contributions are welcome! If you'd like to improve Leet E-Commerce:
